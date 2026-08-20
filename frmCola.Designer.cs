@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCola));
             this.gbNuevoElemento = new System.Windows.Forms.GroupBox();
-            this.gbEliminarElemento = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtNuevoNombre = new System.Windows.Forms.TextBox();
+            this.txtNuevoTramite = new System.Windows.Forms.TextBox();
+            this.txtNuevoCodigo = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.gbEliminarElemento = new System.Windows.Forms.GroupBox();
+            this.txtEliminarNombre = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.txtEliminarTramite = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEliminarCodigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtNuevoCodigo = new System.Windows.Forms.TextBox();
-            this.txtNuevoTramite = new System.Windows.Forms.TextBox();
-            this.txtNuevoNombre = new System.Windows.Forms.TextBox();
-            this.txtEliminarNombre = new System.Windows.Forms.TextBox();
-            this.txtEliminarTramite = new System.Windows.Forms.TextBox();
-            this.txtEliminarCodigo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lstCola = new System.Windows.Forms.ListBox();
             this.dgvCola = new System.Windows.Forms.DataGridView();
@@ -74,6 +74,64 @@
             this.gbNuevoElemento.TabStop = false;
             this.gbNuevoElemento.Text = "Nuevo Elemento";
             // 
+            // txtNuevoNombre
+            // 
+            this.txtNuevoNombre.Location = new System.Drawing.Point(104, 54);
+            this.txtNuevoNombre.Name = "txtNuevoNombre";
+            this.txtNuevoNombre.Size = new System.Drawing.Size(120, 20);
+            this.txtNuevoNombre.TabIndex = 6;
+            // 
+            // txtNuevoTramite
+            // 
+            this.txtNuevoTramite.Location = new System.Drawing.Point(104, 83);
+            this.txtNuevoTramite.Name = "txtNuevoTramite";
+            this.txtNuevoTramite.Size = new System.Drawing.Size(120, 20);
+            this.txtNuevoTramite.TabIndex = 5;
+            // 
+            // txtNuevoCodigo
+            // 
+            this.txtNuevoCodigo.Location = new System.Drawing.Point(104, 26);
+            this.txtNuevoCodigo.Name = "txtNuevoCodigo";
+            this.txtNuevoCodigo.Size = new System.Drawing.Size(120, 20);
+            this.txtNuevoCodigo.TabIndex = 4;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(104, 119);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(120, 23);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Nombre:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tramite";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Codigo:";
+            // 
             // gbEliminarElemento
             // 
             this.gbEliminarElemento.Controls.Add(this.txtEliminarNombre);
@@ -90,41 +148,12 @@
             this.gbEliminarElemento.TabStop = false;
             this.gbEliminarElemento.Text = "Elemento a Eliminar";
             // 
-            // label1
+            // txtEliminarNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tramite";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nombre:";
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(104, 119);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(120, 23);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.txtEliminarNombre.Location = new System.Drawing.Point(109, 54);
+            this.txtEliminarNombre.Name = "txtEliminarNombre";
+            this.txtEliminarNombre.Size = new System.Drawing.Size(120, 20);
+            this.txtEliminarNombre.TabIndex = 9;
             // 
             // btnEliminar
             // 
@@ -134,6 +163,29 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // txtEliminarTramite
+            // 
+            this.txtEliminarTramite.Location = new System.Drawing.Point(109, 83);
+            this.txtEliminarTramite.Name = "txtEliminarTramite";
+            this.txtEliminarTramite.Size = new System.Drawing.Size(120, 20);
+            this.txtEliminarTramite.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Codigo:";
+            // 
+            // txtEliminarCodigo
+            // 
+            this.txtEliminarCodigo.Location = new System.Drawing.Point(109, 26);
+            this.txtEliminarCodigo.Name = "txtEliminarCodigo";
+            this.txtEliminarCodigo.Size = new System.Drawing.Size(120, 20);
+            this.txtEliminarCodigo.TabIndex = 7;
             // 
             // label4
             // 
@@ -152,57 +204,6 @@
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Tramite";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Codigo:";
-            // 
-            // txtNuevoCodigo
-            // 
-            this.txtNuevoCodigo.Location = new System.Drawing.Point(104, 26);
-            this.txtNuevoCodigo.Name = "txtNuevoCodigo";
-            this.txtNuevoCodigo.Size = new System.Drawing.Size(120, 20);
-            this.txtNuevoCodigo.TabIndex = 4;
-            // 
-            // txtNuevoTramite
-            // 
-            this.txtNuevoTramite.Location = new System.Drawing.Point(104, 83);
-            this.txtNuevoTramite.Name = "txtNuevoTramite";
-            this.txtNuevoTramite.Size = new System.Drawing.Size(120, 20);
-            this.txtNuevoTramite.TabIndex = 5;
-            // 
-            // txtNuevoNombre
-            // 
-            this.txtNuevoNombre.Location = new System.Drawing.Point(104, 54);
-            this.txtNuevoNombre.Name = "txtNuevoNombre";
-            this.txtNuevoNombre.Size = new System.Drawing.Size(120, 20);
-            this.txtNuevoNombre.TabIndex = 6;
-            // 
-            // txtEliminarNombre
-            // 
-            this.txtEliminarNombre.Location = new System.Drawing.Point(109, 54);
-            this.txtEliminarNombre.Name = "txtEliminarNombre";
-            this.txtEliminarNombre.Size = new System.Drawing.Size(120, 20);
-            this.txtEliminarNombre.TabIndex = 9;
-            // 
-            // txtEliminarTramite
-            // 
-            this.txtEliminarTramite.Location = new System.Drawing.Point(109, 83);
-            this.txtEliminarTramite.Name = "txtEliminarTramite";
-            this.txtEliminarTramite.Size = new System.Drawing.Size(120, 20);
-            this.txtEliminarTramite.TabIndex = 8;
-            // 
-            // txtEliminarCodigo
-            // 
-            this.txtEliminarCodigo.Location = new System.Drawing.Point(109, 26);
-            this.txtEliminarCodigo.Name = "txtEliminarCodigo";
-            this.txtEliminarCodigo.Size = new System.Drawing.Size(120, 20);
-            this.txtEliminarCodigo.TabIndex = 7;
             // 
             // label7
             // 
@@ -272,6 +273,7 @@
             this.Name = "frmCola";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCola";
+            this.Load += new System.EventHandler(this.frmCola_Load);
             this.gbNuevoElemento.ResumeLayout(false);
             this.gbNuevoElemento.PerformLayout();
             this.gbEliminarElemento.ResumeLayout(false);
