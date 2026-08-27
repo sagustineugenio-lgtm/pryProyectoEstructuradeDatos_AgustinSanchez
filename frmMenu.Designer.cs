@@ -32,17 +32,17 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.msSistema = new System.Windows.Forms.ToolStripMenuItem();
-            this.msEstrucLineales = new System.Windows.Forms.ToolStripMenuItem();
-            this.msEstrucNoLineales = new System.Windows.Forms.ToolStripMenuItem();
-            this.msBasedeDatos = new System.Windows.Forms.ToolStripMenuItem();
             this.msDatosdelDesarrollador = new System.Windows.Forms.ToolStripMenuItem();
             this.msSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.msEstrucLineales = new System.Windows.Forms.ToolStripMenuItem();
             this.msCola = new System.Windows.Forms.ToolStripMenuItem();
             this.msPila = new System.Windows.Forms.ToolStripMenuItem();
             this.msListaEntraSimple = new System.Windows.Forms.ToolStripMenuItem();
             this.msListaDobleEnlazada = new System.Windows.Forms.ToolStripMenuItem();
+            this.msEstrucNoLineales = new System.Windows.Forms.ToolStripMenuItem();
             this.msArbolBinario = new System.Windows.Forms.ToolStripMenuItem();
             this.msGrafos = new System.Windows.Forms.ToolStripMenuItem();
+            this.msBasedeDatos = new System.Windows.Forms.ToolStripMenuItem();
             this.msMostrarTabla = new System.Windows.Forms.ToolStripMenuItem();
             this.msConsultaBaseDatos = new System.Windows.Forms.ToolStripMenuItem();
             this.msOperacionesBaseDatos = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,37 +78,6 @@
             this.msSistema.Size = new System.Drawing.Size(60, 20);
             this.msSistema.Text = "Sistema";
             // 
-            // msEstrucLineales
-            // 
-            this.msEstrucLineales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msCola,
-            this.msPila,
-            this.msListaEntraSimple,
-            this.msListaDobleEnlazada});
-            this.msEstrucLineales.Name = "msEstrucLineales";
-            this.msEstrucLineales.Size = new System.Drawing.Size(122, 20);
-            this.msEstrucLineales.Text = "Estructuras Lineales";
-            // 
-            // msEstrucNoLineales
-            // 
-            this.msEstrucNoLineales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msArbolBinario,
-            this.msGrafos});
-            this.msEstrucNoLineales.Name = "msEstrucNoLineales";
-            this.msEstrucNoLineales.Size = new System.Drawing.Size(141, 20);
-            this.msEstrucNoLineales.Text = "Estructuras No Lineales";
-            // 
-            // msBasedeDatos
-            // 
-            this.msBasedeDatos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msMostrarTabla,
-            this.msConsultaBaseDatos,
-            this.msOperacionesBaseDatos,
-            this.msConsultasOperaciones});
-            this.msBasedeDatos.Name = "msBasedeDatos";
-            this.msBasedeDatos.Size = new System.Drawing.Size(92, 20);
-            this.msBasedeDatos.Text = "Base de Datos";
-            // 
             // msDatosdelDesarrollador
             // 
             this.msDatosdelDesarrollador.Name = "msDatosdelDesarrollador";
@@ -120,6 +89,17 @@
             this.msSalir.Name = "msSalir";
             this.msSalir.Size = new System.Drawing.Size(196, 22);
             this.msSalir.Text = "Salir";
+            // 
+            // msEstrucLineales
+            // 
+            this.msEstrucLineales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msCola,
+            this.msPila,
+            this.msListaEntraSimple,
+            this.msListaDobleEnlazada});
+            this.msEstrucLineales.Name = "msEstrucLineales";
+            this.msEstrucLineales.Size = new System.Drawing.Size(122, 20);
+            this.msEstrucLineales.Text = "Estructuras Lineales";
             // 
             // msCola
             // 
@@ -133,6 +113,7 @@
             this.msPila.Name = "msPila";
             this.msPila.Size = new System.Drawing.Size(215, 22);
             this.msPila.Text = "Pila";
+            this.msPila.Click += new System.EventHandler(this.msPila_Click);
             // 
             // msListaEntraSimple
             // 
@@ -146,6 +127,15 @@
             this.msListaDobleEnlazada.Size = new System.Drawing.Size(215, 22);
             this.msListaDobleEnlazada.Text = "Lista Doblemente Enlazada";
             // 
+            // msEstrucNoLineales
+            // 
+            this.msEstrucNoLineales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msArbolBinario,
+            this.msGrafos});
+            this.msEstrucNoLineales.Name = "msEstrucNoLineales";
+            this.msEstrucNoLineales.Size = new System.Drawing.Size(141, 20);
+            this.msEstrucNoLineales.Text = "Estructuras No Lineales";
+            // 
             // msArbolBinario
             // 
             this.msArbolBinario.Name = "msArbolBinario";
@@ -157,6 +147,17 @@
             this.msGrafos.Name = "msGrafos";
             this.msGrafos.Size = new System.Drawing.Size(214, 22);
             this.msGrafos.Text = "Grafos";
+            // 
+            // msBasedeDatos
+            // 
+            this.msBasedeDatos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msMostrarTabla,
+            this.msConsultaBaseDatos,
+            this.msOperacionesBaseDatos,
+            this.msConsultasOperaciones});
+            this.msBasedeDatos.Name = "msBasedeDatos";
+            this.msBasedeDatos.Size = new System.Drawing.Size(92, 20);
+            this.msBasedeDatos.Text = "Base de Datos";
             // 
             // msMostrarTabla
             // 

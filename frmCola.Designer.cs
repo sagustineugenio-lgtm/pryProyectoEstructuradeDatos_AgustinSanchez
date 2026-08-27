@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCola));
             this.gbNuevoElemento = new System.Windows.Forms.GroupBox();
             this.txtNuevoNombre = new System.Windows.Forms.TextBox();
             this.txtNuevoTramite = new System.Windows.Forms.TextBox();
@@ -51,11 +50,9 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbNuevoElemento.SuspendLayout();
             this.gbEliminarElemento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbNuevoElemento
@@ -79,21 +76,21 @@
             this.txtNuevoNombre.Location = new System.Drawing.Point(104, 54);
             this.txtNuevoNombre.Name = "txtNuevoNombre";
             this.txtNuevoNombre.Size = new System.Drawing.Size(120, 20);
-            this.txtNuevoNombre.TabIndex = 6;
+            this.txtNuevoNombre.TabIndex = 1;
             // 
             // txtNuevoTramite
             // 
             this.txtNuevoTramite.Location = new System.Drawing.Point(104, 83);
             this.txtNuevoTramite.Name = "txtNuevoTramite";
             this.txtNuevoTramite.Size = new System.Drawing.Size(120, 20);
-            this.txtNuevoTramite.TabIndex = 5;
+            this.txtNuevoTramite.TabIndex = 2;
             // 
             // txtNuevoCodigo
             // 
             this.txtNuevoCodigo.Location = new System.Drawing.Point(104, 26);
             this.txtNuevoCodigo.Name = "txtNuevoCodigo";
             this.txtNuevoCodigo.Size = new System.Drawing.Size(120, 20);
-            this.txtNuevoCodigo.TabIndex = 4;
+            this.txtNuevoCodigo.TabIndex = 0;
             // 
             // btnAgregar
             // 
@@ -249,22 +246,11 @@
             this.Column3.HeaderText = "Tramite";
             this.Column3.Name = "Column3";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(521, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(293, 142);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmCola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(651, 441);
             this.Controls.Add(this.dgvCola);
             this.Controls.Add(this.lstCola);
             this.Controls.Add(this.label7);
@@ -279,7 +265,6 @@
             this.gbEliminarElemento.ResumeLayout(false);
             this.gbEliminarElemento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,6 +294,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

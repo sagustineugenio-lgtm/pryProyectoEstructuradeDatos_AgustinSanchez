@@ -22,5 +22,11 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
            frmCola frmCola = new frmCola();
            frmCola.Show();
         }
+
+        private void msPila_Click(object sender, EventArgs e)
+        {
+            frmPila frmPila = new frmPila();
+            frmPila.Show();
+        }
     }
 }

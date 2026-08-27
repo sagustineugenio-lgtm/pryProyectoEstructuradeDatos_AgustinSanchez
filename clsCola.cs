@@ -17,31 +17,45 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
 
         public void Agregar(clsNodo Nuevo)
         {
-            if (Primero == null)
+            if (Primero==null)
             {
-                Primero = Nuevo;
-                Ultimo = Nuevo;
+                Primero=Nuevo;
+                Ultimo=Nuevo;
             }
             else
             {
-                Ultimo.siguiente = Nuevo;
-                Ultimo = Nuevo;
+                Ultimo.siguiente=Nuevo;
+                Ultimo=Nuevo;
             }
         }
 
-        public void Recorrer(ListBox lstLista)
+        public void Recorrer(ListBox lstCola)
         {
             clsNodo aux=Primero;
 
-            lstLista.Items.Clear();
-
             while(aux!=null)
             {
-                lstLista.Items.Add(aux.Nombre);
+                lstCola.Items.Add(aux.Codigo);
                 aux=aux.siguiente;
             }
         }
-        
+
+        public void RecorrerDgv(DataGridView dgvCola)
+        {
+            clsNodo aux = primero;
+
+            while (aux != null)
+            {
+                dgvCola.Rows.Add(
+                    aux.Codigo,
+                    aux.Nombre,
+                    aux.Tramite
+                    );
+
+                aux = aux.siguiente;
+            }
+        }
+       
     }
     
 

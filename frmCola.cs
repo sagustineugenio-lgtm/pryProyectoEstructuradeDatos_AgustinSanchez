@@ -18,8 +18,8 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
             InitializeComponent();
            
         }
-        clsCola objCola = new clsCola();
-        clsNodo objNodo = new clsNodo();
+        
+        
 
 
         private void frmCola_Load(object sender, EventArgs e)
@@ -29,13 +29,16 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            objNodo.Codigo = Convert.ToInt32(txtNuevoCodigo.Text);
-            objNodo.Nombre = txtNuevoNombre.Text;
-            objNodo.Tramite = txtNuevoTramite.Text;
+            clsNodo x = new clsNodo();
+            clsCola c = new clsCola();
 
-            objCola.Agregar(objNodo);
-            objCola.Recorrer(lstCola);
+            x.Codigo = Convert.ToInt32(txtNuevoCodigo.Text);
+            x.Nombre = txtNuevoNombre.Text;
+            x.Tramite = txtNuevoTramite.Text;
 
+            c.Agregar(x);
+            c.Recorrer(lstCola);
+            c.RecorrerDgv(dgvCola);
         }
     }
 }
