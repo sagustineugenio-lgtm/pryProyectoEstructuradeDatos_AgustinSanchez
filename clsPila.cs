@@ -39,18 +39,19 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
         public void Recorrer(ListBox lstCola)
         {
             clsNodo aux = Primero;
-
+            lstCola.Items.Clear();
             while (aux != null)
             {
                 lstCola.Items.Add(aux.Codigo);
                 aux = aux.siguiente;
             }
+
         }
 
         public void RecorrerDgv(DataGridView dgvCola)
         {
             clsNodo aux = primero;
-
+            dgvCola.Rows.Clear();
             while (aux != null)
             {
                 dgvCola.Rows.Add(

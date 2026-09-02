@@ -16,11 +16,13 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
         {
             InitializeComponent();
         }
+        clsPila p = new clsPila();
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             clsNodo x = new clsNodo();
-            clsPila p = new clsPila();
+
+
 
             x.Codigo = Convert.ToInt32(txtAgrCodigo.Text);
             x.Nombre = txtAgrNombre.Text;
@@ -33,16 +35,17 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            clsPila p = new clsPila();
             clsNodo x = new clsNodo();
+            if (p.Primero != null)
+            {
+                txtElimCodigo.Text = p.Primero.Codigo.ToString();
+                txtElimNombre.Text = p.Primero.Nombre;
+                txtElimTramite.Text = p.Primero.Tramite;
 
-            x.Codigo = Convert.ToInt32(txtElimCodigo.Text);
-            x.Nombre = txtElimNombre.Text;
-            x.Tramite = txtElimTramite.Text;
-
-            p.Eliminar(x);
-            p.Recorrer(lstListaPila);
-            p.RecorrerDgv(dgvPila);
+                p.Eliminar(x);
+                p.Recorrer(lstListaPila);
+                p.RecorrerDgv(dgvPila);
+            }
         }
     }
 }
