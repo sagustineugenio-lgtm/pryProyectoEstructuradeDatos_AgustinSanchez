@@ -36,25 +36,25 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
             }
         }
 
-        public void Recorrer(ListBox lstCola)
+        public void Recorrer(ListBox lstPila)
         {
             clsNodo aux = Primero;
-            lstCola.Items.Clear();
+            lstPila.Items.Clear();
             while (aux != null)
             {
-                lstCola.Items.Add(aux.Codigo);
+                lstPila.Items.Add(aux.Codigo);
                 aux = aux.siguiente;
             }
 
         }
 
-        public void RecorrerDgv(DataGridView dgvCola)
+        public void RecorrerDgv(DataGridView dgvPila)
         {
             clsNodo aux = primero;
-            dgvCola.Rows.Clear();
+            dgvPila.Rows.Clear();
             while (aux != null)
             {
-                dgvCola.Rows.Add(
+                dgvPila.Rows.Add(
                     aux.Codigo,
                     aux.Nombre,
                     aux.Tramite
