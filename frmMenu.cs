@@ -28,5 +28,11 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
             frmPila frmPila = new frmPila();
             frmPila.Show();
         }
+
+        private void msListaEntraSimple_Click(object sender, EventArgs e)
+        {
+            frmLista frmLista = new frmLista();
+            frmLista.Show();
+        }
     }
 }

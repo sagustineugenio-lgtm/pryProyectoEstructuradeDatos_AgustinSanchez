@@ -120,6 +120,7 @@
             this.msListaEntraSimple.Name = "msListaEntraSimple";
             this.msListaEntraSimple.Size = new System.Drawing.Size(215, 22);
             this.msListaEntraSimple.Text = "Lista Entrada Simple";
+            this.msListaEntraSimple.Click += new System.EventHandler(this.msListaEntraSimple_Click);
             // 
             // msListaDobleEnlazada
             // 

@@ -28,6 +28,14 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
             }
         }
 
+        public void Eliminar(clsNodo Nuevo)
+        {
+            if (Primero != null)
+            {
+                Primero = Primero.siguiente;
+            }
+        }
+
         public void Recorrer(ListBox lstCola)
         {
             clsNodo aux = Primero;

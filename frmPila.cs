@@ -30,5 +30,19 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
             p.Recorrer(lstListaPila);
             p.RecorrerDgv(dgvPila);
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            clsPila p = new clsPila();
+            clsNodo x = new clsNodo();
+
+            x.Codigo = Convert.ToInt32(txtElimCodigo.Text);
+            x.Nombre = txtElimNombre.Text;
+            x.Tramite = txtElimTramite.Text;
+
+            p.Eliminar(x);
+            p.Recorrer(lstListaPila);
+            p.RecorrerDgv(dgvPila);
+        }
     }
 }
