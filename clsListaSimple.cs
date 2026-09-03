@@ -1,0 +1,100 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace pryProyectoEstructuradeDatos_AgustinSanchez
+{
+    public class clsListaSimple
+    {
+        private clsNodo primero;
+
+        internal clsNodo Primero { get => primero; set => primero = value; }
+
+
+        public void Agregar(clsNodo Nuevo)
+        {
+            if (Primero == null)
+            {
+                Primero = Nuevo;
+            }
+            else
+            {
+                if (Nuevo.Codigo <= Primero.Codigo)
+                {
+                    Nuevo.siguiente = Primero;
+                }
+                else
+                {
+                    clsNodo aux = Primero;
+
+                    clsNodo ant = Primero;
+
+                    while (aux != null && Nuevo.Codigo > aux.Codigo)
+                    {
+                        ant = aux;
+
+                        aux = aux.siguiente;
+                    }
+
+                    ant.siguiente = Nuevo;
+
+                    Nuevo.siguiente = aux;
+                }
+            }
+        }
+
+        public void Eliminar(Int32 codigo)
+        {
+            if (Primero.Codigo == codigo)
+            {
+                Primero = Primero.siguiente;
+            }
+            else
+            {
+                clsNodo ant = Primero;
+                clsNodo aux = Primero;
+                while (aux.Codigo != codigo)
+                {
+                    ant = aux;
+                    aux = aux.siguiente;
+                }
+                ant.siguiente = aux.siguiente;
+            }
+        }
+
+        public void Recorrer(DataGridView grilla)
+        {
+            clsNodo aux = Primero;
+            grilla.Rows.Clear();
+            while (aux != null)
+            {
+                grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.siguiente;
+            }
+        }
+        public void Recorrer(ListBox lista)
+        {
+            clsNodo aux = Primero;
+            lista.Items.Clear();
+            while (aux != null)
+            {
+                lista.Items.Add(aux.Codigo + " " + aux.Nombre + " " + aux.Tramite);
+                aux = aux.siguiente;
+            }
+        }
+
+        public void Recorrer(ComboBox combo)
+        {
+            clsNodo aux = Primero;
+            combo.Items.Clear();
+            while (aux != null)
+            {
+                combo.Items.Add(aux.Codigo);
+                aux = aux.siguiente;
+            }
+        }
+    }
+}

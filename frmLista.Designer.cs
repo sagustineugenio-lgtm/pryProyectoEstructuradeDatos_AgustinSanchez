@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtAgrTramite = new System.Windows.Forms.TextBox();
             this.txtAgrNombre = new System.Windows.Forms.TextBox();
             this.txtAgrCodigo = new System.Windows.Forms.TextBox();
@@ -37,9 +36,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbCodElim = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.cmbCodElim = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,18 +70,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Elemento";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnEliminar);
-            this.groupBox2.Controls.Add(this.cmbCodElim);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(401, 5);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(205, 157);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Elemento a Eliminar";
-            // 
             // txtAgrTramite
             // 
             this.txtAgrTramite.Location = new System.Drawing.Point(80, 73);
@@ -111,6 +99,7 @@
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label3
             // 
@@ -139,22 +128,17 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Codigo";
             // 
-            // label4
+            // groupBox2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Codigo";
-            // 
-            // cmbCodElim
-            // 
-            this.cmbCodElim.FormattingEnabled = true;
-            this.cmbCodElim.Location = new System.Drawing.Point(78, 50);
-            this.cmbCodElim.Name = "cmbCodElim";
-            this.cmbCodElim.Size = new System.Drawing.Size(121, 21);
-            this.cmbCodElim.TabIndex = 9;
+            this.groupBox2.Controls.Add(this.btnEliminar);
+            this.groupBox2.Controls.Add(this.cmbCodElim);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(401, 5);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(205, 157);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Elemento a Eliminar";
             // 
             // btnEliminar
             // 
@@ -164,6 +148,24 @@
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // cmbCodElim
+            // 
+            this.cmbCodElim.FormattingEnabled = true;
+            this.cmbCodElim.Location = new System.Drawing.Point(78, 50);
+            this.cmbCodElim.Name = "cmbCodElim";
+            this.cmbCodElim.Size = new System.Drawing.Size(121, 21);
+            this.cmbCodElim.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Codigo";
             // 
             // groupBox3
             // 
@@ -210,6 +212,7 @@
             this.lstListaSimple.Name = "lstListaSimple";
             this.lstListaSimple.Size = new System.Drawing.Size(245, 212);
             this.lstListaSimple.TabIndex = 0;
+            this.lstListaSimple.SelectedIndexChanged += new System.EventHandler(this.lstListaSimple_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -231,6 +234,7 @@
             this.Name = "frmLista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLista";
+            this.Load += new System.EventHandler(this.frmLista_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
