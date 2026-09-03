@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pryProyectoEstructuradeDatos_AgustinSanchez
 {
-    internal class clsNodo
+    public class clsNodo
     {
         private int codigo;
         private string nombre;

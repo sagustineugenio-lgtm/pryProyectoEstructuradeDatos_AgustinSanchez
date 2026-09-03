@@ -25,6 +25,7 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
                 if (Nuevo.Codigo <= Primero.Codigo)
                 {
                     Nuevo.siguiente = Primero;
+                    Primero= Nuevo; 
                 }
                 else
                 {
