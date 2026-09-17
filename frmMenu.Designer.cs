@@ -127,6 +127,7 @@
             this.msListaDobleEnlazada.Name = "msListaDobleEnlazada";
             this.msListaDobleEnlazada.Size = new System.Drawing.Size(215, 22);
             this.msListaDobleEnlazada.Text = "Lista Doblemente Enlazada";
+            this.msListaDobleEnlazada.Click += new System.EventHandler(this.msListaDobleEnlazada_Click);
             // 
             // msEstrucNoLineales
             // 

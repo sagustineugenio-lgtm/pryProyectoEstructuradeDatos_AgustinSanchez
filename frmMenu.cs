@@ -34,5 +34,11 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
             frmLista frmLista = new frmLista();
             frmLista.Show();
         }
+
+        private void msListaDobleEnlazada_Click(object sender, EventArgs e)
+        {
+            frmListaDoble frmListaDoble = new frmListaDoble();
+            frmListaDoble.Show();
+        }
     }
 }
