@@ -40,17 +40,17 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
                     }
                     else
                     {
-                        clsNodo aux = Primero;
-                        clsNodo ant = aux.Ant;
-                        while (aux.Codigo < Nuevo.Codigo)
+                        clsNodo Aux = Primero;
+                        clsNodo Ant = Aux.Ant;
+                        while (Aux.Codigo < Nuevo.Codigo)
                         {
-                            ant = aux;
-                            aux = aux.Sig;
+                            Ant = Aux;
+                            Aux = Aux.Sig;
                         }
-                        ant.Sig = Nuevo;
-                        Nuevo.Sig = aux;
-                        aux.Ant = Nuevo;
-                        Nuevo.Sig = ant;
+                        Ant.Sig = Nuevo;
+                        Nuevo.Sig = Aux;
+                        Aux.Ant = Nuevo;
+                        Nuevo.Ant = Ant;
                     }
                 }
             }
@@ -79,16 +79,16 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
                     }
                     else
                     {
-                        clsNodo aux = Primero;
-                        clsNodo ant = Primero;
-                        while (aux.Codigo < codigo)
+                        clsNodo Aux = Primero;
+                        clsNodo Ant = Primero;
+                        while (Aux.Codigo < codigo)
                         {
-                            ant = aux;
-                            aux = aux.Sig;
+                            Ant = Aux;
+                            Aux = Aux.Sig;
                         }
-                        ant.Sig = aux.Sig;
-                        aux = aux.Sig;
-                        aux.Ant = ant;
+                        Ant.Sig = Aux.Sig;
+                        Aux = Aux.Sig;
+                        Aux.Ant = Ant;
                     }
                 }
             }
