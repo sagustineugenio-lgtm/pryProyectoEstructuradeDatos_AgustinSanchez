@@ -166,18 +166,21 @@
             this.msMostrarTabla.Name = "msMostrarTabla";
             this.msMostrarTabla.Size = new System.Drawing.Size(246, 22);
             this.msMostrarTabla.Text = "Mostrar una Tabla";
+            this.msMostrarTabla.Click += new System.EventHandler(this.msMostrarTabla_Click);
             // 
             // msConsultaBaseDatos
             // 
             this.msConsultaBaseDatos.Name = "msConsultaBaseDatos";
             this.msConsultaBaseDatos.Size = new System.Drawing.Size(246, 22);
             this.msConsultaBaseDatos.Text = "Consulta una Base de Datos";
+            this.msConsultaBaseDatos.Click += new System.EventHandler(this.msConsultaBaseDatos_Click);
             // 
             // msOperacionesBaseDatos
             // 
             this.msOperacionesBaseDatos.Name = "msOperacionesBaseDatos";
             this.msOperacionesBaseDatos.Size = new System.Drawing.Size(246, 22);
             this.msOperacionesBaseDatos.Text = "Operaciones en Base de Datos";
+            this.msOperacionesBaseDatos.Click += new System.EventHandler(this.msOperacionesBaseDatos_Click);
             // 
             // msConsultasOperaciones
             // 

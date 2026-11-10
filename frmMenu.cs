@@ -40,5 +40,23 @@ namespace pryProyectoEstructuradeDatos_AgustinSanchez
             frmListaDoble frmListaDoble = new frmListaDoble();
             frmListaDoble.Show();
         }
+
+        private void msMostrarTabla_Click(object sender, EventArgs e)
+        {
+            frmMostrarTabla frmMostrarTabla = new frmMostrarTabla();
+            frmMostrarTabla.Show();
+        }
+
+        private void msConsultaBaseDatos_Click(object sender, EventArgs e)
+        {
+            frmConsultaBaseDeDatos frmConsultaBaseDeDatos = new frmConsultaBaseDeDatos();
+            frmConsultaBaseDeDatos.Show();
+        }
+
+        private void msOperacionesBaseDatos_Click(object sender, EventArgs e)
+        {
+            frmOperaciones frmOperaciones = new frmOperaciones();
+            frmOperaciones.Show();
+        }
     }
 }
